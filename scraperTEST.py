@@ -20,3 +20,13 @@ password.send_keys(passwordStr)
 nextButton = browser.find_element_by_id('formContentPlaceholder_loginApiButton')
 nextButton.click()
 
+# wait for transition then continue to fill items
+sectionButton = WebDriverWait(browser, 35).until(
+    EC.presence_of_element_located((By.ID, 'sections.employee')))
+# signInButton = browser.find_element_by_id('sections.employee')
+sectionButton.click()
+
+selfSched = WebDriverWait(browser, 35).until(
+    EC.presence_of_element_located((By.ID, 'formContentPlaceholder_selfScheduleApiButton')))
+# signInButton = browser.find_element_by_id('formContentPlaceholder_selfScheduleApiButton')
+selfSched.click()
