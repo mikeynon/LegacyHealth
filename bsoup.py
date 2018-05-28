@@ -9,7 +9,11 @@ shift = "0700-12"
 url = "https://mytimeremote.lhs.org/APIHC/TASS/WebPortal/APIHealthcare/Login.aspx"
 soup = requests.get(url)
 data = BeautifulSoup(soup, 'html.parser')
-print(data.prettify())
+if TypeError:
+    print()
+else:
+    print(data)
+
 #
 # def job():
 #     print("I'm doing your schedule for you...")
