@@ -13,8 +13,10 @@ passwordStr = 'Stewie5!'
 browser = webdriver.Chrome()
 browser.get(('https://mytimeremote.lhs.org/APIHC/TASS/WebPortal/APIHealthcare/Login.aspx'))
 # fill in username and hit the next button
-username = browser.find_element_by_id('Email')
+username = browser.find_element_by_id('formContentPlaceholder$_userNameField')
 username.send_keys(usernameStr)
-nextButton = browser.find_element_by_id('next')
+password = browser.find_element_by_id('formContentPlaceholder$_passwordField')
+password.send_keys(passwordStr)
+nextButton = browser.find_element_by_id('formContentPlaceholder_loginApiButton')
 nextButton.click()
 
