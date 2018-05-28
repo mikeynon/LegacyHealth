@@ -35,3 +35,8 @@ def job():
     selfSchedButton.click()
     print("entering Self-Scheduler...")
 
+
+schedule.every(6).sunday.at("00:01").do(job)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
