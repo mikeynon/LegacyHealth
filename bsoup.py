@@ -1,13 +1,15 @@
 import datetime
 import schedule
+import requests
 import random
 from bs4 import BeautifulSoup
 
 today = datetime.datetime.now().strftime("%m/%d/%y")
 shift = "0700-12"
 url = "https://mytimeremote.lhs.org/APIHC/TASS/WebPortal/APIHealthcare/Login.aspx"
-soup = BeautifulSoup(url, 'html.parser')
-print(soup.prettify())
+soup = requests.get(url)
+data = BeautifulSoup(soup, 'html.parser')
+print(data.prettify())
 #
 # def job():
 #     print("I'm doing your schedule for you...")
