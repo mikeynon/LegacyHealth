@@ -4,8 +4,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-usernameStr = 'cliefer'
-passwordStr = 'Stewie5!'
+usernameStr = 'XXX'
+passwordStr = 'XXX'
 
 def job():
     print("Starting Scheduler...")
@@ -24,13 +24,13 @@ def job():
         EC.presence_of_element_located((By.ID, 'sections.employee')))
     selfSectionButton = browser.find_element_by_id('sections.employee')
     selfSectionButton.click()
-    print("entering Employee Section...")
+    print("Entering Employee Section...")
 
     selfSched = WebDriverWait(browser, 35).until(
         EC.presence_of_element_located((By.ID, 'formContentPlaceholder_selfScheduleApiButton')))
     selfSchedButton = browser.find_element_by_id('formContentPlaceholder_selfScheduleApiButton')
     selfSchedButton.click()
-    print("entering Self-Scheduler...")
+    print("Entering Self-Scheduler...")
 
 
 schedule.every(6).sunday.at("00:01").do(job)

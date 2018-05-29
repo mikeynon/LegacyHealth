@@ -14,9 +14,9 @@ def job():
 ##LOGIN
     url = "https://mytimeremote.lhs.org/APIHC/TASS/WebPortal/APIHealthcare/Login.aspx"
     name_id = "formContentPlaceholder$_userNameField"
-##cleifer
+##XXX
     pw_id = "formContentPlaceholder$_passwordField"
-##Stewie5!
+##XXX
     sign_in = "formContentPlaceholder_loginApiButton"
 ##signin click
 
